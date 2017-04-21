@@ -56,6 +56,7 @@ nnoremap <silent> <buffer> ]] :<C-U>call <SID>sectionmovement('{{','' ,'n',v:cou
 xnoremap <silent> <buffer> [[ :<C-U>call <SID>sectionmovement('{{','b','v',v:count1)<CR>
 xnoremap <silent> <buffer> ]] :<C-U>call <SID>sectionmovement('{{','' ,'v',v:count1)<CR>
 
+setlocal commentstring={{!--\ %s\ --}}
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
