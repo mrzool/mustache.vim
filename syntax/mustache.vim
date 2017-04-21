@@ -46,7 +46,7 @@ syntax region mustacheVariableUnescape matchgroup=mustacheMarker start=/{{{/ end
 syntax region mustacheSection matchgroup=mustacheMarker start='{{[#/]' end=/}}/ containedin=@htmlMustacheContainer
 syntax region mustachePartial matchgroup=mustacheMarker start=/{{[<>]/ end=/}}/
 syntax region mustacheMarkerSet matchgroup=mustacheMarker start=/{{=/ end=/=}}/
-syntax region mustacheComment start=/{{!/ end=/}}/ contains=Todo containedin=htmlHead
+syntax region mustacheComment start=/{{!/ skip=/{{.\{-}}}/ end=/}}/ contains=Todo containedin=htmlHead extend
 
 
 " Clustering
